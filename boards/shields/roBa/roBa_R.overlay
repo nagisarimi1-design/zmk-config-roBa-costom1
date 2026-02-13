@@ -21,10 +21,10 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        input-processors = <&gesture_window>;
         input-processors =
-        <&zip_temp_layer 8 10000>,
-        <&gesture_L5>;
-    };
+        <&zip_temp_layer 8 10000>;
+    }; 
 };
 
 &pinctrl {
