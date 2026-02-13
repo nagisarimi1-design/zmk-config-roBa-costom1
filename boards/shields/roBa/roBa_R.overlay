@@ -1,4 +1,5 @@
 #include "roBa.dtsi"
+#include "gesture/gesture_L5.dtsi"
 #include <input/processors.dtsi>
 
 &default_transform {
@@ -20,7 +21,10 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_temp_layer 8 10000>;
+
+        input-processors =
+        <&zip_temp_layer 8 10000>,
+        <&gesture_L5>;
     };
 };
 
