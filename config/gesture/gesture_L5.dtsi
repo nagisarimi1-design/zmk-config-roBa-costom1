@@ -1,17 +1,18 @@
 / {
-    gesture_L5: gesture_L5 {
+    gesture_window: gesture_window {
         compatible = "zmk,input-processor-mouse-gesture";
         #input-processor-cells = <0>;
-        layer = <5>;   // ← このレイヤーのときだけ有効
 
-        movement-threshold = <4>;   // 敏感に
-        idle-timeout-ms = <80>;
+        enable-eager-mode;
+        movement-threshold = <6>;
+        idle-timeout-ms = <120>;
+        gesture-cooldown-ms = <150>;
 
         bindings = <
-            &mkp LCLK   // 上で左クリック
-            &mkp RCLK   // 下で右クリック
-            &kp C_Z     // 右でUndo
-            &kp C_Y     // 左でRedo
+            &kp LGUI(UP)            // 上: 最大化
+            &kp LGUI(DOWN)          // 下: 最小化
+            &kp LA(TAB)             // 右: 次のウィンドウ
+            &kp LA(LS(TAB))         // 左: 前のウィンドウ
         >;
     };
 };
