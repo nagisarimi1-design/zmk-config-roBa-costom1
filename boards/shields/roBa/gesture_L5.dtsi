@@ -9,10 +9,10 @@
                 gesture-cooldown-ms = <150>;
         
                 bindings = <
-                    &kp LGUI UP          // 上: 最大化
-                    &kp LGUI DOWN        // 下: 最小化
-                    &kp LALT TAB         // 右: 次のウィンドウ
-                    &kp LALT LSHIFT TAB  // 左: 前のウィンドウ
+                    &kp LGUI KC_UP               // 上: 最大化
+                    &kp LGUI KC_DOWN             // 下: 最小化
+                    &kp LALT KC_TAB              // 右: 次のウィンドウ
+                    &kp LALT LSHIFT KC_TAB       // 左: 前のウィンドウ
                 >;
         };
 };
