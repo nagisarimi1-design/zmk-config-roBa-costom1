@@ -1,5 +1,6 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
+#include <mouse-gesture.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -15,6 +16,31 @@
             ;
 };
 
+&zip_mouse_gesture {
+    stroke-size = <300>; // Optional (default: 200)
+    enable-eager-mode; // Optional, but recommended
+
+    history_back {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LA(LEFT)>;
+    };
+
+    history_forward {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LA(RIGHT)>;
+    };
+
+    close_tab {
+        pattern = <GESTURE_DOWN GESTURE_RIGHT>;
+        bindings = <&kp LC(W)>;
+    };
+
+    new_tab {
+        pattern = <GESTURE_DOWN GESTURE_LEFT>;
+        bindings = <&kp LC(T)>;
+    };
+};
+
 / {
     trackball_listener {
         status = "okay";
@@ -22,6 +48,7 @@
         device = <&trackball>;
         input-processors = <
             &zip_temp_layer 8 10000
+            &zip_mouse_gesture
         >;
     }; 
 };
