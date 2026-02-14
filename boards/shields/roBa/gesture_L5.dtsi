@@ -1,16 +1,18 @@
-gesture_window: gesture_window {
-        compatible = "zmk,input-processor-mouse-gesture";
-        #input-processor-cells = <0>;
-
-        enable-eager-mode;
-        movement-threshold = <6>;
-        idle-timeout-ms = <120>;
-        gesture-cooldown-ms = <150>;
-
-        bindings = <
-            &kp LGUI(UP)            // 上: 最大化
-            &kp LGUI(DOWN)          // 下: 最小化
-            &kp LA(TAB)             // 右: 次のウィンドウ
-            &kp LA(LS(TAB))         // 左: 前のウィンドウ
-        >;
+/{
+        gesture_window: gesture_window {
+                compatible = "zmk,input-processor-mouse-gesture";
+                #input-processor-cells = <0>;
+        
+                enable-eager-mode;
+                movement-threshold = <6>;
+                idle-timeout-ms = <120>;
+                gesture-cooldown-ms = <150>;
+        
+                bindings = <
+                    &kp LGUI(UP)            // 上: 最大化
+                    &kp LGUI(DOWN)          // 下: 最小化
+                    &kp LA(TAB)             // 右: 次のウィンドウ
+                    &kp LA(LS(TAB))         // 左: 前のウィンドウ
+                >;
+        };
 };
