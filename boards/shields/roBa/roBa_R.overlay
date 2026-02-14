@@ -1,6 +1,6 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
-#include "gesture/gesture_L5.dtsi"
+#include "gesture_L5.dtsi"
 
 &default_transform {
     col-offset = <6>;
