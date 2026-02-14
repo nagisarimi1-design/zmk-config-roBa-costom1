@@ -20,25 +20,26 @@
     stroke-size = <300>; // Optional (default: 200)
     enable-eager-mode; // Optional, but recommended
 
-    history_back {
-        pattern = <GESTURE_RIGHT>;
-        bindings = <&kp LA(LEFT)>;
-    };
+history_back {
+    pattern = <GESTURE_RIGHT>;
+    bindings = <&kp LALT LEFT>;
+};
 
-    history_forward {
-        pattern = <GESTURE_LEFT>;
-        bindings = <&kp LA(RIGHT)>;
-    };
+history_forward {
+    pattern = <GESTURE_LEFT>;
+    bindings = <&kp LALT RIGHT>;
+};
 
-    close_tab {
-        pattern = <GESTURE_DOWN GESTURE_RIGHT>;
-        bindings = <&kp LC(W)>;
-    };
+close_tab {
+    pattern = <GESTURE_DOWN GESTURE_RIGHT>;
+    bindings = <&kp LCTRL W>;
+};
 
-    new_tab {
-        pattern = <GESTURE_DOWN GESTURE_LEFT>;
-        bindings = <&kp LC(T)>;
-    };
+new_tab {
+    pattern = <GESTURE_DOWN GESTURE_LEFT>;
+    bindings = <&kp LCTRL T>;
+};
+
 };
 
 / {
