@@ -1,6 +1,5 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
-#include "gesture_L5.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -23,7 +22,6 @@
         device = <&trackball>;
         input-processors = <
             &zip_temp_layer 8 10000
-            &gesture_window
         >;
     }; 
 };
