@@ -59,6 +59,11 @@
             bindings = <&kp A>;
             key-positions = <18 19 20>;
         };
+
+        tab {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
